@@ -1,0 +1,18 @@
+[package]
+name = "test-neon"
+version = "0.1.0"
+authors = ["himself65 <himself65@outlook.com>"]
+license = "MIT"
+build = "build.rs"
+edition = "2018"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "test_neon"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.7.0"
+
+[dependencies]
+neon = { version = "0.7", default-features = false, features = ["napi-4"] }
